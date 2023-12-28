@@ -1,10 +1,10 @@
 # How-to-customize-axis-labels
 
-This article explains how to customize axis labels.
+This article explains how to customize axis labels in Blazor Chart Component.
 
-**Changing axis label color using OnAxisLabelRender event**
+**Customizing axis labels in Blazor chart**
 
-[Blazor chart](https://www.syncfusion.com/blazor-components/blazor-charts) provides various customization options for axis labels using [OnAxisLabelRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisLabelRender) event. This event triggers before each axis label renders. 
+[Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts) provides various customization options for axis labels using [OnAxisLabelRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisLabelRender) event. This event triggers before each axis label renders. 
 
 Below properties in event args can be used to customize the label rendering.
 
@@ -16,18 +16,13 @@ Below properties in event args can be used to customize the label rendering.
 |**FontFamily**|To customize the font family of label.|
 |**FontStyle**|To customize the font style.|
 |**FontWeight**|To customize the font weight.|
-|**Opacity**|To customize the transparency of the text.|
- 
+|**Opacity**|To customize the transparency of the text.| 
 
+The properties such as `Color`, `FontFamily`, `FontStyle`, `FontWeight` and `Opacity` of the axis label can be customized by using [LabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelRenderEventArgs_LabelStyle) event argument of the [OnAxisLabelRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisLabelRender) event. 
 
-- [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelRenderEventArgs_Text) – Get or sets the text to be displayed in the axis label. You can change the text based on Value and Axis properties.
-- [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelRenderEventArgs_Value) – Specifies the value of the axis label. For CategoryAxis, it denotes the index of the datapoints and for numeric and date time axis Value denotes the actual value of the datapoints.
-- [Axis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelClickEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelClickEventArgs_Axis) – Specifies the axis for which labels are rendering.
-- **Cancel**- Gets or sets whether to cancel the rendering of label.
+The following code example illustrates how to customize the color of the axis labels in Blazor chart.
 
-The following code example illustrates how to customize axis label.
-
-**C#**
+**Index.razor**
 
 ```cshtml
 
@@ -75,11 +70,11 @@ The following code example illustrates how to customize axis label.
 
 ```
 
-The following screenshot illustrate the output of the above code snippet.
+The following screenshot illustrates the output of the above code snippet.
 
 **Output:**
 
-![](/label-customization.png)
+![Axis label customization](/label-customization.png)
 
 **Conclusion**
 
